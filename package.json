@@ -1,0 +1,45 @@
+{
+  "author": {
+    "name": "Fernando Emmanuel Braz",
+    "url": "https://www.fernandobraz.online"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.4",
+    "@hono/zod-validator": "^0.7.0",
+    "@plunk/node": "^3.0.3",
+    "@prisma/client": "6.10.1",
+    "@stackframe/js": "^2.8.12",
+    "@stackframe/stack": "^2.8.12",
+    "hono": "^4.8.2",
+    "zod": "^3.25.67"
+  },
+  "description": "A template for building a type-safe API using Hono RPC.",
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.4",
+    "@types/node": "^24.0.3",
+    "husky": "^9.1.7",
+    "prisma": "^6.10.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "name": "api-hono",
+  "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac",
+  "private": true,
+  "scripts": {
+    "check": "pnpm run check:format && pnpm run check:lint",
+    "check:format": "biome format .",
+    "check:lint": "biome check .",
+    "build": "prisma generate",
+    "dev:client": "tsx --env-file=.env src/client.ts",
+    "dev:server": "tsx watch --env-file=.env src/index.ts",
+    "format": "biome format --write .",
+    "lint": "biome check --write .",
+    "migrate:dev": "prisma migrate dev",
+    "migrate:reset": "prisma migrate reset",
+    "prepare": "husky",
+    "studio": "prisma studio",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}
