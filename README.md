@@ -17,7 +17,13 @@ This is a boilerplate project for building a type-safe API using Hono RPC. It co
 
 ## Manual Setup
 
-### 1. Configure Environment Variables
+### 1. Clone the repository
+
+Use the button "Use this template" to create a new repository from this template.
+
+Alternatively, clone it and update the remote yourself.
+
+### 2. Configure Environment Variables
 
 Create a `.env` file in the root of the project by copying the example file:
 
@@ -33,7 +39,7 @@ Now, open the `.env` file and fill in the following values:
 - `STACK_SECRET_SERVER_KEY`: Your Stack Auth secret server key.
 - `PLUNK_API_KEY`: Your Plunk API key.
 
-### 2. Run Database Migrations
+### 3. Run Database Migrations
 
 Apply the initial database schema to your Neon database:
 
